@@ -16,8 +16,8 @@ config/features=PackedStringArray("4.3")
 
 [display]
 
-window/size/width=512
-window/size/height=512
+window/size/viewport_width=512
+window/size/viewport_height=512
 
 [input]
 
