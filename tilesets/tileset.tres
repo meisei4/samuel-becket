@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c78oh8gb1560j"]
 
-[ext_resource type="Texture2D" uid="uid://lmigxf1lag4" path="res://assets/water.png" id="1_auwah"]
+[ext_resource type="Texture2D" uid="uid://dhifrecw52u28" path="res://assets/water.png" id="1"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bc8yy"]
-texture = ExtResource("1_auwah")
+[sub_resource type="TileSetAtlasSource" id="1"]
+texture = ExtResource("1")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -23,4 +23,4 @@ texture_region_size = Vector2i(64, 64)
 
 [resource]
 tile_size = Vector2i(64, 64)
-sources/1 = SubResource("TileSetAtlasSource_bc8yy")
+sources/0 = SubResource("1")

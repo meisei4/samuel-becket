@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3]
-
-[ext_resource type="TileSet" path="res://tilesets/tileset.tres" id="1_c4vao"]
-
-[node name="" type="TileMap"]
-tile_set = ExtResource("1_c4vao")
-format = 2

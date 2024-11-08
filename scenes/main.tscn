@@ -1,23 +1,44 @@
-[gd_scene load_steps=5 format=4]
+[gd_scene load_steps=8 format=3 uid="uid://47lg51ak1yn4"]
 
-[ext_resource path="res://scripts/main.gd" type="Script" id=1]
-[ext_resource path="res://scripts/player.gd" type="Script" id=2]
-[ext_resource path="res://assets/circle.png" type="Texture2D" id=3]
-[ext_resource path="res://scenes/BackgroundTileMap.tscn" type="PackedScene" id=4]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/build_tilemap.gd" id="3"]
+[ext_resource type="Texture2D" path="res://assets/circle.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/water.png" id="5"]
 
+[sub_resource type="TileSetAtlasSource" id="1"]
+texture = ExtResource("5")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
 
-[node name="Main" type="Node"]
-script = ExtResource( 1 )
+[sub_resource type="TileSet" id="2"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("1")
 
+[node name="Main" type="Node2D"]
+script = ExtResource("1")
+
+[node name="BackgroundTileMap" type="TileMapLayer" parent="."]
+tile_set = SubResource("2")
+script = ExtResource("3")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource( 2 )
-position = Vector2(256, 256)
+script = ExtResource("2")
 
 [node name="Sprite" type="Sprite2D" parent="Player"]
-texture = ExtResource( 3 )
-
-[node name="BackgroundTileMap" type="TileMap" parent="."]
-instance = ExtResource( 4 )
-
+texture = ExtResource("4")
 
