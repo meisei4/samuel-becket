@@ -1,5 +1,8 @@
 extends TileMapLayer
 
+# TODO this is where you need to start learning how godot uses inheretance. 
+# start focusing on how the Scene implicitly runs these scripts when you use them as Resources
+
 func _ready():
 	var tile_set_source = tile_set.get_source(0)
 	var map_width = 8
