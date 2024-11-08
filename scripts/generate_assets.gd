@@ -9,8 +9,8 @@ const CIRCLE_PATH = ASSETS_DIR + "circle.png"
 # Function to generate all assets
 func _initialize():
     generate_circle()
-    generate_tile("white", WHITE_TILE_PATH, Color(1, 1, 1, 1)) # White tile
-    generate_tile("black", BLACK_TILE_PATH, Color(0, 0, 0, 1)) # Black tile
+    generate_tile(WHITE_TILE_PATH, Color(1, 1, 1, 1)) # White tile
+    generate_tile(BLACK_TILE_PATH, Color(0, 0, 0, 1)) # Black tile
     print("All assets generated successfully.")
     quit()
 
@@ -18,7 +18,7 @@ func _initialize():
 func generate_circle():
 
     var size = 64
-    var radius = size / 2
+    var radius = size / 2.0
     var image = Image.create(int(size), int(size), false, Image.FORMAT_RGBA8)
     for y in range(0, size):
         for x in range(0, size):
@@ -31,7 +31,7 @@ func generate_circle():
     image.save_png(CIRCLE_PATH)
 
 # Function to generate a single tile (white or black)
-func generate_tile(name: String, path: String, color: Color):
+func generate_tile(path: String, color: Color):
     var size = 64
     var image = Image.create(int(size), int(size), false, Image.FORMAT_RGBA8)
     image.fill(color)
