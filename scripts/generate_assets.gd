@@ -1,6 +1,6 @@
 extends SceneTree
+# This is just a basic script to show how to use GDScript external to the game world
 
-# Paths for assets within the existing 'assets' directory
 const ASSETS_DIR = "res://assets/"
 const WHITE_TILE_PATH = ASSETS_DIR + "white_tile.png"
 const BLACK_TILE_PATH = ASSETS_DIR + "black_tile.png"

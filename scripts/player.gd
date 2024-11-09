@@ -7,5 +7,5 @@ func _physics_process(delta):
 	# TODO: delta here is often too low as the time for frame draw 
 	# just writing self to make it clear im in OOP
 	self.velocity = input_dir * SPEED # * delta
-	print("fps: ", 1 / delta)
+	# print("fps: ", 1 / delta)
 	move_and_slide()
